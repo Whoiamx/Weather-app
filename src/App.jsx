@@ -89,10 +89,10 @@ function App() {
           <div className="weather">
             <div className="weather-info">
               {weather.grades > 25 ? (
-                <img className="iconWeather" src={"/public/images/sun.png"} />
+                <img className="iconWeather" src={"/images/sun.png"} />
               ) : null}
               {weather.grades < 20 ? (
-                <img className="iconWeather" src={"/public/images/snow.png"} />
+                <img className="iconWeather" src={"images/snow.png"} />
               ) : null}
               <p className="grades">{weather.grades}</p>
               <p className="text-grades">
