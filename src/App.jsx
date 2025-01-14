@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
-import image from "./snow.png";
-import image2 from "./sun.png";
 
 const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=7a81928411d1410daa933134251301&q=`;
 
@@ -91,10 +89,10 @@ function App() {
           <div className="weather">
             <div className="weather-info">
               {weather.grades > 25 ? (
-                <img className="iconWeather" src={"/src/sun.png"} />
+                <img className="iconWeather" src={"/public/images/sun.png"} />
               ) : null}
               {weather.grades < 20 ? (
-                <img className="iconWeather" src={"/src/snow.png"} />
+                <img className="iconWeather" src={"/public/images/snow.png"} />
               ) : null}
               <p className="grades">{weather.grades}</p>
               <p className="text-grades">
