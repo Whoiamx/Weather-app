@@ -84,39 +84,40 @@ function App() {
         />
         <button onClick={handleButtonSend}>Ver Clima</button>
       </div>
-
-      <div className="weather-app-container">
-        <div className="weather">
-          <div className="weather-info">
-            {weather.grades > 25 ? (
-              <img className="iconWeather" src={"/src/sun.png"} />
-            ) : null}
-            {weather.grades < 20 ? (
-              <img className="iconWeather" src={"/src/snow.png"} />
-            ) : null}
-            <p className="grades">{weather.grades}</p>
-            <p className="text-grades">
-              <span className="degree-symbol">º</span>C
-            </p>
+      {country.country ? (
+        <div className="weather-app-container">
+          <div className="weather">
+            <div className="weather-info">
+              {weather.grades > 25 ? (
+                <img className="iconWeather" src={"/src/sun.png"} />
+              ) : null}
+              {weather.grades < 20 ? (
+                <img className="iconWeather" src={"/src/snow.png"} />
+              ) : null}
+              <p className="grades">{weather.grades}</p>
+              <p className="text-grades">
+                <span className="degree-symbol">º</span>C
+              </p>
+            </div>
+            <div className="weather-info-extra">
+              <p className="weather-text">Humedad: {weather.humidity}%</p>
+              <p className="weather-text">Viento a: {weather.windkph} km/h</p>
+              <p className="weather-text">
+                Precipitaciones: {weather.precipmm} %
+              </p>
+            </div>
           </div>
-          <div className="weather-info-extra">
-            <p className="weather-text">Humedad: {weather.humidity}%</p>
-            <p className="weather-text">Viento a: {weather.windkph} km/h</p>
+
+          <div className="weather-app-location">
             <p className="weather-text">
-              Precipitaciones: {weather.precipmm} %
+              🗺 {`${country.name}, ${country.country} `}
+            </p>
+            <p className="weather-text">
+              {time.date} {time.time}
             </p>
           </div>
         </div>
-
-        <div className="weather-app-location">
-          <p className="weather-text">
-            🗺 {`${country.name}, ${country.country} `}
-          </p>
-          <p className="weather-text">
-            {time.date} {time.time}
-          </p>
-        </div>
-      </div>
+      ) : null}
     </>
   );
 }
