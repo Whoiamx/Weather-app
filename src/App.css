@@ -1,0 +1,92 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.weather-app-container {
+  width: 45em;
+  height: 20em;
+  background: rgba(255, 255, 255, 0.15); /* Fondo translúcido */
+  border-radius: 2em;
+  backdrop-filter: blur(10px); /* Desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  color: #ffffff; /* Texto blanco */
+  font-family: "Arial", sans-serif;
+  display: flex;
+
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5em;
+}
+
+.iconWeather {
+  width: 10em;
+  height: 10em;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3em;
+}
+.weather-app-location {
+  display: flex;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+.degree-symbol {
+  vertical-align: top;
+  font-size: 0.8em;
+}
+
+.grades {
+  font-size: 4rem;
+  line-height: 1;
+}
+.text-grades {
+  font-size: 3rem;
+}
+
+.weather-text {
+  font-size: 1.2rem;
+}
+
+#img-weather {
+  width: 8em;
+  height: 8em;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+#input-element {
+  padding: 1.4em;
+  width: 30em;
+  background-color: #f0f8ff;
+  color: black;
+  border-radius: 2em;
+  font-size: 1em;
+}
