@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import image from "./snow.png";
+import image2 from "./sun.png";
 
 const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=7a81928411d1410daa933134251301&q=`;
 
